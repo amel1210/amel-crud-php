@@ -34,6 +34,18 @@
   ?>
   </table>
 
-  <a href="form_simpan.php"><p>Tambah Data</p></a><br><br>
+  <a href="form_simpan.php"><p>Tambah Data</p></a><br><br></a>
+  <a href="tampilan.php"><p>Kembali</p></a><br><br></a>
+  <?php if(isset($_GET['status'])): ?>
+    <p>
+        <?php
+            if($_GET['status'] == 'sukses'){
+                echo "Pendaftaran siswa baru berhasil!";
+            } else {
+                echo "Pendaftaran gagal!";
+            }
+        ?>
+    </p>
+<?php endif; ?>
 </body>
 </html>
